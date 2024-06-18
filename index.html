@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" 
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Dynamic Quotes Website</title>
+</head>
+<body>
+
+    <div class="contaier">
+        <div class="inner" data-aos="zoom-in">
+            <div class="box">
+                <p class="number">
+                    <img src="data:image/png;base64,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"
+                        alt="tweetMe" 
+                        title="TweetMe" 
+                        id="tweetMe">
+                </p>
+
+                <div class="text">
+                    <i class="start-quote fas fa-quote-left"></i>
+                    <p id="quotes" class="quotes"></p>
+                    <p id="author" class="author"></p>
+                </div>
+
+                <label class="button">
+                    <p id="newQuotesButton">New Quote</p>
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        document.addEventListener("DOMContentLoaded", () => {
+            const quotes = document.getElementById("quotes");
+            const author = document.getElementById("author");
+            const newQuotesButton = document.getElementById("newQuotesButton");
+            const tweetMe = document.getElementById("tweetMe");
+            let realData = [];
+
+
+            const tweetNow = () => {
+                let tweetPost = `https://twitter.com/intent/tweet?text=${quotes.innerText} ${author.innerText}`;
+                window.open(tweetPost);
+            }
+
+
+            const getNewQuotes = () => {
+                if (realData.length === 0) {
+                    console.error("No quotes available to display");
+                    return;
+                }
+
+                const rnum = Math.floor(Math.random() * realData.length);
+                quotes.innerText = realData[rnum].text || "No quote text available"; // Handle cases where text is null or undefined
+                author.innerText = realData[rnum].author.split(",")[0] || "Unknown"; // Handle cases where author is null
+            }
+
+            const getQuotes = async () => {
+                const api = "https://type.fit/api/quotes";
+                try {
+                    let data = await fetch(api);
+                    if (!data.ok) {
+                        throw new Error(`HTTP error! status: ${data.status}`);
+                    }
+                    realData = await data.json();
+                    if (realData.length === 0) {
+                        throw new Error("No quotes found");
+                    }
+                    getNewQuotes();
+                } catch (error) {
+                    console.error("Error fetching quotes:", error);
+                }
+            }
+
+            tweetMe.addEventListener("click", tweetNow)
+            newQuotesButton.addEventListener("click", getNewQuotes);
+
+            getQuotes();
+        });
+    </script>
+</body>
+</html>
